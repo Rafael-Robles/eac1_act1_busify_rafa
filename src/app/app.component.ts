@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'ioc-angular-busify-rafa';
+  constructor()
+  {
+    console.log("Busify d'ha inicialitzat correctament");
+  }
 }
