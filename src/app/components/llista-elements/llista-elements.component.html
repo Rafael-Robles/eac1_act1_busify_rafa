@@ -1,0 +1,7 @@
+<app-barra-cerca (cercaCambiada)="filtrarParades($event)"></app-barra-cerca>
+
+<div *ngIf="filtrat.length === 0" aria-live="polite">Sense resultats</div>
+
+<div class="llista" *ngIf="filtrat.length > 0" role="list">
+  <app-targeta-element *ngFor="let parada of filtrat; trackBy: trackById" [element]="parada" role="listitem"></app-targeta-element>
+</div>

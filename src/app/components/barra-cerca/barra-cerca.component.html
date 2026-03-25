@@ -1,0 +1,20 @@
+<header>
+
+    <h1>Busify - EAC2</h1>
+    
+    <form #formulariCerca="ngForm" (ngSubmit)="onBuscar()" aria-label="Formulari de cerca">
+        
+        <label for="cerca">Buscar parada:</label>
+        <input type="text" name="cerca" minlength="3" placeholder="Ex. Plaça" [(ngModel)]="cerca" #inputCerca="ngModel" required aria-required="true" 
+        aria-describedby="error-cerca ">
+    
+        <button type="submit" [disabled]="formulariCerca.invalid" aria-label="Cercar elements">Buscar</button>
+    
+        <div class="error" *ngIf="inputCerca.invalid && inputCerca.touched" id="error-cerca" aria-live="assertive">
+    
+            <div *ngIf="inputCerca.errors?.['required']">Aquest camp es obligatori</div>
+            <div *ngIf="inputCerca.errors?.['minlength']">Ha de ser de minim 3 caracters</div>
+        </div>
+    </form>
+
+</header>

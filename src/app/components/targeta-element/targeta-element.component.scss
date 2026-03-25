@@ -1,0 +1,30 @@
+.targeta {
+    background-color: #d4ddd2;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 4px rgba(94, 94, 94, 0.1);
+    min-height: 120px;
+    max-height: 200px;
+}
+
+@media (max-width: 768px) {
+  .targeta {
+    min-height: 0px;
+    max-height: 100px;
+  }
+  .targeta h2 {
+    font-size: 18px;
+  }
+  .targeta h4 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .targeta h2 {
+    font-size: 20px;
+  }
+  .targeta h4 {
+    font-size: 18px;
+  }
+}
