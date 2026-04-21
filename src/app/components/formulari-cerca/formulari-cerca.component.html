@@ -1,0 +1,25 @@
+<div class="ex_3">
+  <h2>Exercici 3:</h2>
+
+  <input [formControl]="termeCerca" />
+  <button *ngIf="termeCerca.value" (click)="netejar()">
+    Netejar
+  </button>
+
+
+
+  <div *ngIf="termeCerca.touched && termeCerca.errors?.['minlength']">
+    Minim 2 caràcters
+  </div>
+
+  <div *ngIf="termeCerca.touched && termeCerca.errors?.['maxlength']">
+    Maxim 50 caracters
+  </div>
+
+  <div *ngIf="termeCerca.touched && termeCerca.errors?.['sensResultats']">
+    No s'han trobat resultats
+  </div>
+  <div *ngIf="validant">
+    Validant...
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busify</title>
+</head>
+<body>
+  
+  <div class="ex_1_2">
+
+    <h2>Exercici 1 i 2:</h2>
+
+    <div *ngIf="elementService.carregant()">
+
+      <div class="spinner">Carregant</div>
+
+    </div>
+    <div *ngIf="elementService.error() as err">
+
+      <p style="color:red">{{ err }}</p>
+      <button (click)="elementService.obtenirPopulars()">Reintentar</button>
+
+    </div>
+
+    <div *ngIf="!elementService.carregant() && !elementService.error()">
+
+      <div *ngFor="let el of elementService.elements()">
+
+        <h3>{{ el.titol }}</h3>
+        <p>{{ el.descripcio }}</p>
+        <p>{{ el.preu }} €</p>
+
+      </div>
+
+    </div>
+  </div>
+  
+  <p>---------------------------------------------------</p>
+
+  <app-formulari-cerca></app-formulari-cerca>
+
+  <p>--------------------------------------------------</p>
+
+  <div class="ex_4">
+
+    <h2>Exercici 4:</h2>
+
+    <div *ngFor="let el of elementService.elements()">
+
+      <h3>{{ el.titol }}</h3>
+
+      <p>Estat:</p>
+      <button (click)="
+        preferitsService.esPreferit(el.id)
+          ? preferitsService.eliminarPreferit(el.id)
+          : preferitsService.afegirPreferit(el)
+      ">
+      
+        {{ preferitsService.esPreferit(el.id) ? 'Preferit' : 'No preferit' }}
+      
+      </button>
+      <p>------------------------</p>
+
+    </div>
+
+    <h2>Llista de preferits ({{ preferitsService.totalPreferits() }})</h2>
+
+    <div *ngFor="let fav of preferitsService.preferits()">
+
+      <p>{{ fav.titol }}</p>
+
+    </div>
+
+  </div>
+
+
+  <app-preferits-panel></app-preferits-panel>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+
+<div class="ex_5">
+
+  <h2>Preferits amb notes</h2>
+  
+  <div *ngFor="let fav of preferitsService.preferits(); trackBy: trackById">
+  
+    <h3>{{ fav.titol }}</h3>
+  
+    <div *ngFor="let nota of obtenirFormArray(fav.id).controls; let i = index; trackBy: trackByIndex">
+  
+      <input [formControl]="nota" />
+  
+      <button (click)="eliminarNota(fav.id, i)">x</button>
+  
+      <div *ngIf="nota.touched && nota.invalid">
+        Nota minima de 3 caracters
+      </div>
+  
+    </div>
+  
+    <button (click)="afegirNota(fav.id)">+</button>
+  
+  </div>
+
+</div>
