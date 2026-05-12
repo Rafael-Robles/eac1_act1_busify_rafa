@@ -1,7 +1,7 @@
 # Busify
 
 
-Es una app d'Anular que es per al modul de prog. avançada. Aquesta aplicacio ha sigut per poder consultar totes les linies d'autobus que tenen trajectes llargs.
+Es una app d'Angular que es per al modul de prog. avançada. Aquesta aplicacio ha sigut per poder consultar totes les linies d'autobus que tenen trajectes llargs.
 També conte un buscador per consultar les linias i el seu estat, ocupacio, etc.
 
 A part, la seccio de preferits esta protegida per a que nomes usuaris amb sessio iniciada puguin entrar, sino et torna a la pagina de log in.
