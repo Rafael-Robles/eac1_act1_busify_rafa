@@ -1,27 +1,60 @@
-# IocAngularBusifyRafa
+# Busify
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
 
-## Development server
+Es una app d'Anular que es per al modul de prog. avançada. Aquesta aplicacio ha sigut per poder consultar totes les linies d'autobus que tenen trajectes llargs.
+També conte un buscador per consultar les linias i el seu estat, ocupacio, etc.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A part, la seccio de preferits esta protegida per a que nomes usuaris amb sessio iniciada puguin entrar, sino et torna a la pagina de log in.
 
-## Code scaffolding
+Aquesta app no ha sigut desenvolupada desde 0, sino que ha sigut en part la idea meva quan vaig fer el meu propi projecte final de DAW, en aquell projecte, vaig fer quasi el mateix que en aquesta app, però amb la diferència de que he utilitzat un CLI en canvi d'escriure codi PHP, JS, SQL i HTML pur.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Es per això que el disseny de la pàgina, els icones i assets estan trets d'aquell projecte meu. (busify.cat)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Rutes de l'app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+/ === Redirigeix a /cataleg
+/cataleg === Component: CatalegPageComponent - Acces: Public
+/cerca === Component: CercaComponent - Acces:Públic
+/detall/:id === Component: DetallComponent - Acces: Public
+/preferits === Component: PreferitsComponent - Acces: Privado (requiere login)
+/login === Component: LoginComponent - Acces: Public
+/** === Component: Redirigeix a `/cataleg`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Com s'executara en local
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Inserim aquestes comandes:
+
+git clone https://github.com/Rafael-Robles/eac1_act1_busify_rafa.git
+cd eac1_act1_busify_rafa
+git checkout ra4-navegacio
+npm install (en cas de que no tinguis node)
+ng serve
+
+Si tot funciona correctament el terminal et dira que entris a un link semblant a aquest: http://localhost:4200
+
+
+
+
+
+## Build de producció
+
+Inserim aquesta comanda: 
+
+ng build --configuration production
+
+
+Els arxius generats van a la carpeta dist/. El bundle inicial pesa 239KB i el chunk de favoritos que seria el 'lazy loading' uns 8,5KB 
+
+
+
+
+## Credenciales de prueba
+
+Per accedir a la seccio de preferits iniciant sessio, has d'anar a la pagina d'iniciar sessio i emplenar el formulari amb aquestes credencials:
+
+- Email: admin@test.com  
+- Contrasenya: 1234

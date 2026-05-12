@@ -1,0 +1,21 @@
+<nav class="navegacio">
+  <div class="logo">
+    <img src="assets/logo/favicon_blanco.png" alt="Logo">
+    <a class="titol" routerLink="/cataleg">Busify</a>
+  </div>
+
+  <div class="pagines">
+    <a routerLink="/cataleg" routerLinkActive="actiu" [routerLinkActiveOptions]="{exact: true}">Busos</a>
+    <a routerLink="/cerca" routerLinkActive="actiu">Buscar</a>
+    <a routerLink="/preferits" routerLinkActive="actiu">Favoritos</a>
+
+    <ng-container *ngIf="usuari$ | async as usuari; else noAutenticat">
+      <a>{{ usuari.nom }}</a>
+      <a href="../../app.component.html" (click)="logout()"><button>Cerrar sesion</button></a>
+    </ng-container>
+
+    <ng-template #noAutenticat>
+      <a routerLink="/login" routerLinkActive="actiu">Iniciar sesion</a>
+    </ng-template>
+  </div>
+</nav>

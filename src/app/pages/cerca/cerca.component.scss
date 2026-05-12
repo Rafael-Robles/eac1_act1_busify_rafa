@@ -1,0 +1,74 @@
+h1 {
+  color: #145a32;
+  margin-bottom: 24px;
+  font-size: 36px;
+}
+
+.cerca-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  border: 2px solid #1b5e20;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 16px;
+}
+
+.ajuda, .no-resultat {
+  color: grey;
+  margin-top: 16px;
+}
+
+
+.resultats {
+  margin-top: 24px;
+  max-width: 700px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+}
+
+.resultat-bus {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #ecebeb;
+  }
+}
+
+.linia {
+  background: #1b5e20;
+  color: white;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dest {
+  flex: 1;
+  font-size: 15px;
+}
+
+.estat {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c62828;
+
+  &.actiu {
+    color: #2e7d32;
+  }
+}
+
+.link {
+  color: #145a32;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

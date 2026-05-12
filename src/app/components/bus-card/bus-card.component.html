@@ -1,0 +1,11 @@
+<div class="bus-card">
+  <span class="linia">{{ bus.linia }}</span>
+  <div class="info">
+    <span class="destinacio">{{ bus.destinacio }}</span>
+    <span class="places"> <strong> Plazas:</strong> {{ bus.places }}</span>
+  </div>
+  <span class="estat" [class.actiu]="bus.estat === 'Activo'">
+    {{ bus.estat }}
+  </span>
+  <a [routerLink]="['/detall', bus.id]" class="link">Ver detalle</a>
+</div>

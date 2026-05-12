@@ -1,0 +1,38 @@
+<div *ngIf="bus; else noTrobat" class="detall-bus">
+  <div class="header">
+    <h1>Linea {{ bus.linia }}</h1>
+    <span class="estat" [class.actiu]="bus.estat === 'Activo'">
+      {{ bus.estat }}
+    </span>
+  </div>
+  
+  <table class="info-taula">
+    <tr>
+      <td><strong>ID del bus</strong></td>
+      <td><code>{{ idParam }}</code></td>
+    </tr>
+    <tr>
+      <td><strong>Destino</strong></td>
+      <td>{{ bus.destinacio }}</td>
+    </tr>
+    <tr>
+      <td><strong>Plazas disponibles</strong></td>
+      <td>{{ bus.places }}</td>
+    </tr>
+    <tr>
+      <td><strong>Estado</strong></td>
+      <td>{{ bus.estat }}</td>
+    </tr>
+  </table>
+  
+  <p class="descripcio">{{ bus.descripcio }}</p>
+</div>
+
+<ng-template #noTrobat>
+  <div class="no-trobat">
+    <h2>Bus no encontrado</h2>
+    <p>No existe ningun bus con el ID: <code>{{ idParam }}</code></p>
+  </div>
+</ng-template>
+<br>
+<a routerLink="/cataleg" class="volver">Volver al listado</a>

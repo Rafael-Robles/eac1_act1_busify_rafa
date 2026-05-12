@@ -1,0 +1,21 @@
+<h1>Buscar Autobuses</h1>
+
+<input class="cerca-input" [(ngModel)]="terme" placeholder="Escribe linea, destino o estado..."/>
+
+<p class="ajuda" *ngIf="!terme">
+  Prueba buscando "L1", "Madrid" o "Activo"
+</p>
+
+<div class="resultats" *ngIf="resultats.length > 0">
+  <p class="count">{{ resultats.length }} resultado(s) para "<strong>{{ terme }}</strong>"</p>
+  <div *ngFor="let b of resultats" class="resultat-bus">
+    <span class="linia">{{ b.linia }}</span>
+    <span class="dest">{{ b.destinacio }}</span>
+    <span class="estat" [class.actiu]="b.estat === 'Activo'">{{ b.estat }}</span>
+    <a [routerLink]="['/detall', b.id]" class="link">Ver →</a>
+  </div>
+</div>
+
+<p class="no-resultat" *ngIf="terme && resultats.length === 0">
+  No se han encontrado resultados para "<strong>{{ terme }}</strong>".
+</p>

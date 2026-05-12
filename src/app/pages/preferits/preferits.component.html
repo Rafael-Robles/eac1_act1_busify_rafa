@@ -1,0 +1,17 @@
+<div class="preferits">
+  <h1>Autobuses Favoritos</h1>
+
+  <div *ngIf="usuari$ | async as usuari" class="benvinguda">
+    <p>Bienvenido, <strong>{{ usuari.nom }}</strong>.</p>
+    <p>Esta parte esta protegida y solo para admin</p>
+  </div>
+
+  <div class="informacio">
+    <h3>Que puedes hacer aqui</h3>
+    <ul>
+      <li>Guardar tus lineas de bus favoritas</li>
+      <li>Consultar horarios personalizados</li>
+      <li>Recibir alertas de incidencias</li>
+    </ul>
+  </div>
+</div>

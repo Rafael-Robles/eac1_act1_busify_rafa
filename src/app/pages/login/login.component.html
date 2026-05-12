@@ -1,0 +1,27 @@
+<div class="iniciar-sessio">
+  <h1>Iniciar Sesion</h1>
+
+  <div class="form">
+    <label>
+      Email
+      <input type="email" [(ngModel)]="email" placeholder="admin@test.com"/>
+    </label>
+
+    <label>
+      Contraseña
+      <input type="password" [(ngModel)]="contrasenya" placeholder="1234"/>
+    </label>
+
+    <button (click)="login()">Entrar</button>
+
+    <div class="error" *ngIf="errorLogin">
+      Datos incorrectos
+    </div>
+    <p class="ajuda">
+      Datos de prueba:
+      <code>admin&#64;test.com</code> /
+      <code>1234</code>
+    </p>
+  </div>
+
+</div>

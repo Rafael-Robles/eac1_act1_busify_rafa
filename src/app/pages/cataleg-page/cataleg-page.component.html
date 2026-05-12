@@ -1,0 +1,9 @@
+<h1>Listado de autobuses ({{ busos.length }} servicios)</h1>
+
+<cdk-virtual-scroll-viewport
+  [itemSize]="altadaElement"
+  style="height: 500px; overflow-y: auto;">
+  <div *cdkVirtualFor="let bus of busos">
+    <app-bus-card [bus]="bus"></app-bus-card>
+  </div>
+</cdk-virtual-scroll-viewport>

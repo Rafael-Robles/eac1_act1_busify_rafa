@@ -1,0 +1,33 @@
+.bus-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px;
+  background: rgba(255,255,255,0.96);
+
+  border-bottom: 1px solid white;
+  transition: 0.2s;
+}
+
+.bus-card:hover {
+  background: #f1f8f2;
+}
+
+.linia {
+  background: var(--verde-busify);
+  color: white;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.link {
+  color: var(--verde-busify);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

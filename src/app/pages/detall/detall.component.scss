@@ -1,0 +1,51 @@
+.volver {
+  display: inline-block;
+  color: #145a32;
+  text-decoration: none;
+  margin-bottom: 24px;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.detall-bus {
+  background: white;
+  padding: 32px;
+  max-width: 700px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+
+.estat {
+  background: #ffebee;
+  color: #c62828;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: bold;
+
+  &.actiu {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+}
+
+.info-taula {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+
+  td {
+    padding: 14px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+
+
+.no-trobat {
+  text-align: center;
+  padding: 48px;
+  color: #c62828;
+}

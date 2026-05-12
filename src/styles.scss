@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --verde: #218838;
+  --verde-oscuro: #19692c;
+  --gris-claro: #f1f3f4;
+  --verde-busify: #1b5e20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* botones globales */
+.btn-primary {
+  background: var(--verde-busify);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--verde-oscuro);
+}
+
+/* formularios */
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--verde-busify);
+}
